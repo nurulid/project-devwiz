@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>Devwiz</div>;
+  return <main>Devwiz</main>;
 }
