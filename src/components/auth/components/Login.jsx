@@ -8,7 +8,6 @@ export const Login = () => {
         <Input  isRequired
         type="email"
         label="Email"
-        defaultValue="junior@nextui.org"
         variant="flat"
         radius="full"
         placeholder="email@domain.com" />
