@@ -5,10 +5,12 @@ import {Link} from "@nextui-org/react";
 export const Login = () => {
   return (
     <main className="space-y-3">
+        <p className="text-center text-small p-4 font-semibold" >Register to create your first event ⭐</p>
+        <Input variant="flat" radius="full"
+        placeholder="name" />
         <Input  isRequired
         type="email"
         label="Email"
-        defaultValue="junior@nextui.org"
         variant="flat"
         radius="full"
         placeholder="email@domain.com" />
@@ -16,10 +18,10 @@ export const Login = () => {
         variant="flat"
         radius="full"
         placeholder="password" type="password" />
-        <Button color="default" variant="ghost">Log in</Button>
+        <Button color="default" variant="ghost">Register</Button>
         <div className="flex gap-2">
-            <div>Don't have an acoount ? </div>
-            <div><Link href="/register" color="default" align="underlined">Register</Link></div>
+            <div>Already have account ? </div>
+            <div><Link href="/login" color="default" align="underlined">Login</Link></div>
         </div>
     </main>
   )
