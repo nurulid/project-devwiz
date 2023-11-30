@@ -1,7 +1,7 @@
 import { Login } from "@/components/auth/components/Login";
 
 export default function Page() {
-  return <main>
+  return (
     <Login />
-  </main>;
+  );
 }

@@ -2,13 +2,15 @@ import { Input, Button } from "@nextui-org/react";
 import React from 'react';
 import {Link} from "@nextui-org/react";
 
-export const Login = () => {
+export const Register = () => {
+ 
+  
   return (
     <main className="space-y-4 bg-zinc-50 shadow-md p-7 rounded-lg">
         <p className="text-center text-xl tracking-wide p-4 font-semibold" >Register to create your first event ⭐</p>
-        <Input variant="flat" radius="full"
+        <Input  variant="flat" radius="full"
         placeholder="name" />
-        <Input  isRequired
+        <Input   isRequired
         type="email"
         label="Email"
         variant="flat"
