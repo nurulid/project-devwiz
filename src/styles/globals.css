@@ -6,4 +6,9 @@
     html, body {
         @apply h-full;
     }
+
+    /* To make the footer stay at the bottom despite there's not enough content */
+    body > div[data-overlay-container="true"] {
+        @apply h-full flex flex-col; 
+    }
 }
