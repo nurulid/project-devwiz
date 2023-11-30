@@ -7,8 +7,8 @@ export const Header = () => {
         <div className="flex items-stretch justify-between">
           <div className="font-bold">EventMakers</div>
           <div className="space-x-4">
-            <Link href={"/login"}>Login</Link>
-            <Link href={"/register"} className="bg-black text-white px-4 py-3 rounded-full">Sign up</Link>
+            <Link href={"/login"} className="link">Login</Link>
+            <Link href={"/register"} className="btn-link">Sign up</Link>
           </div>
         </div>
       </div>

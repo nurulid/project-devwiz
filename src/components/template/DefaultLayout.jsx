@@ -17,7 +17,7 @@ export const DefaultLayout = ({ children }) => {
   return (
     <>
       <Header/>
-      <main className="max-w-7xl mx-auto p-6">{children}</main>
+      <main className="max-w-7xl mx-auto mb-10 p-6">{children}</main>
       <Footer />
     </>
   );
