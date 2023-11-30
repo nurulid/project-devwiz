@@ -4,8 +4,8 @@ import {Link} from "@nextui-org/react";
 
 export const Login = () => {
   return (
-    <main className="space-y-3">
-        <p className="text-center text-small p-4 font-semibold" >Register to create your first event ⭐</p>
+    <main className="space-y-4 bg-zinc-50 shadow-md p-7 rounded-lg">
+        <p className="text-center text-xl tracking-wide p-4 font-semibold" >Register to create your first event ⭐</p>
         <Input variant="flat" radius="full"
         placeholder="name" />
         <Input  isRequired

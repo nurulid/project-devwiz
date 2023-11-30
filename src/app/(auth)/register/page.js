@@ -1,7 +1,7 @@
-import { Login } from "@/components/auth/components/Register";
+import { Register } from "@/components/auth/components/Register";
 
 export default function Page() {
   return <main>
-    <Login />
+    <Register />
   </main>;
 }

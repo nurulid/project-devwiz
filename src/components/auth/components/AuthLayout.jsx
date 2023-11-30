@@ -6,12 +6,12 @@ import Image from 'next/image';
 export const AuthLayout = ({children}) => {
   return (
     <main className="h-screen grid grid cols-1 lg:grid-cols-2">
-    <div className="hidden lg:block py-12 px-10 bg-gradient-to-r from-slate-100 to-slate-700">
-      <section className="w-[640px]">
-    <Image 
+    <div className="hidden lg:block py-10 pr-px-10 items-center bg-zinc-100 ">
+      <section className=" flex justify-center items-centerw-[640px]">
+        <Image 
         src="/logo.jpg"
-        width={640}
-        height={640}
+        width={620}
+        height={420}
         alt="logo"
         />
         </section>
