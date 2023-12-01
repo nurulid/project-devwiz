@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { API_URL } from "@/config/apiURL";
 import toast from "react-hot-toast";
+import Cookies from "js-cookie";
 
 export const useLogin = () => {
   /*/function login/*/
@@ -27,6 +28,8 @@ export const useLogin = () => {
     }, body: JSON.stringify({email, password}), 
   }); 
   const data = await res.json();
+  Cookies.set("token", data.token);
+   
   if(!data){
     setLoading(false);
     toast.error("Error try again!");
