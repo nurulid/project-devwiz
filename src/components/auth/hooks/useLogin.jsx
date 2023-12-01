@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import { API_URL } from "@/config/apiURL";
+import toast from "react-hot-toast";
 
 export const useLogin = () => {
   /*/function login/*/
@@ -28,11 +29,12 @@ export const useLogin = () => {
   const data = await res.json();
   if(!data){
     setLoading(false);
-    console.log("error");
+    toast.error("Error try again!");
     return;
   }
   setLoading(false);
-  console.log(data);
+  toast.success("Success 👍");
+  setTimeOut(() => router.push("/dashboard"), 2000);
  }
  return {loading, handleChange, handleSubmitLogin};
 };

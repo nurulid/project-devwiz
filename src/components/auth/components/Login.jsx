@@ -21,7 +21,7 @@ export const Login = () => {
         variant="flat"
         radius="full"
         placeholder="password" type="password" onChange={handleChange}/>
-        <Button color="default" variant="ghost" onClick={handleSubmitLogin}>Log in</Button>
+        <Button isDisabled={loading} color="default" variant="ghost" onClick={handleSubmitLogin}>Log in</Button>
         <div className="flex gap-2">
             <div>Don't have an acoount ? </div>
             <div><Link href="/register" color="default" align="underlined">Register</Link></div>

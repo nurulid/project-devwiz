@@ -22,7 +22,7 @@ export const Register = () => {
         variant="flat"
         radius="full"
         placeholder="password" type="password" onChange={handleChange}/>
-        <Button color="default" variant="ghost" onClick={handleSubmitRegister}>Register</Button>
+        <Button isDisabled={loading} color="default" variant="ghost" onClick={handleSubmitRegister}>Register</Button>
         <div className="flex gap-2">
             <div>Already have account ? </div>
             <div><Link href="/login" color="default" align="underlined">Login</Link></div>
