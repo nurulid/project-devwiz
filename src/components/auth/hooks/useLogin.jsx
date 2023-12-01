@@ -2,29 +2,28 @@
 import { useState } from "react";
 import { API_URL } from "@/config/apiURL";
 
-export const useRegister = () => {
-  /*/function register/*/
+export const useLogin = () => {
+  /*/function login/*/
  const [loading, setLoading] = useState(false)
- const [registerData, setRegisterData] = useState({
-    name: "",
+ const [loginData, setLoginData] = useState({
     email: "",
     password: "",
  });
 
   function handleChange(e) {
   const {name, value} = e.target;
-  setRegisterData({...registerData, [name] : value});
+  setLoginData({...loginData, [name] : value});
  }
 
  /*/function handle submit/*/
- async function handleSubmitRegister (){
+ async function handleSubmitLogin (){
   setLoading(true);
-  const {name, email, password} = registerData;
-  const res = await fetch(`${API_URL}/register`, {
+  const {email, password} = loginData;
+  const res = await fetch(`${API_URL}/login`, {
     method: "POST",
     header: {
       "Content-Type": "application/json",
-    }, body: JSON.stringify({name, email, password}), 
+    }, body: JSON.stringify({email, password}), 
   }); 
   const data = await res.json();
   if(!data){
@@ -35,5 +34,5 @@ export const useRegister = () => {
   setLoading(false);
   console.log(data);
  }
- return {loading, handleChange, handleSubmitRegister};
+ return {loading, handleChange, handleSubmitLogin};
 };
