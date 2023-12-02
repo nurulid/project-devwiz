@@ -8,8 +8,13 @@
     }
 
     /* To make the footer stay at the bottom despite there's not enough content */
+    /* Not sure from where these div come */
     body > div[data-overlay-container="true"] {
-        @apply h-full flex flex-col; 
+        @apply h-full; 
+    }
+
+    body > div[data-overlay-container="true"] > div {
+        @apply h-full; 
     }
 }
 
