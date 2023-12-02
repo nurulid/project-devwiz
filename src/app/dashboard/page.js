@@ -3,6 +3,6 @@ import React from 'react'
 export default function Page() {
   return (
     // TODO: BIKIN DETAIL USER, WELCOME BLA BLA BLA, DISPLAY BUTTON CREATE EVENT
-    <div>Dashboard</div>
+    <h1 className="text-4xl font-semibold mb-10">Dashboard</h1>
   )
 }
