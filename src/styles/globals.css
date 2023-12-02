@@ -25,7 +25,7 @@
         @apply uppercase w-[40px] h-[40px] text-sm bg-gray-300 rounded-full text-center leading-[40px] text-white shadow-medium;
     }
 
-    .avatar:not(:first-child) {
+    .flex .avatar:not(:first-child) {
         margin-left: -15px;
     }
 
