@@ -3,9 +3,11 @@ import { useState } from "react";
 import { API_URL } from "@/config/apiURL";
 import toast from "react-hot-toast";
 import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 export const useLogin = () => {
   /*/function login/*/
+ const router = useRouter();
  const [loading, setLoading] = useState(false)
  const [loginData, setLoginData] = useState({
     email: "",
@@ -36,8 +38,8 @@ export const useLogin = () => {
     return;
   }
   setLoading(false);
-  toast.success("Success 👍");
-  setTimeOut(() => router.push("/dashboard"), 2000);
+  toast.success("Success 👍, Redirecting ...");
+  setTimeout(() => router.push("/dashboard"), 2000);
  }
  return {loading, handleChange, handleSubmitLogin};
 };
