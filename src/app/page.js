@@ -13,6 +13,9 @@ export default function Page() {
           are the chapters that make your narrative extraordinary. -{" "}
           <small className="text-gray-400">ChatGPT</small>
         </h4>
+      <div className="mt-16 animate-bounce text-center">
+        <span className="arrow down" />
+      </div>
       </div>
       <ListEvents />
     </>
