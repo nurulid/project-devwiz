@@ -1,7 +1,7 @@
 import { EventCard } from "@/components/events/components/EventCard";
 
 async function getMyEvents() {
-  // TODO: CHANGE THE STATIC ID
+  // TODO: CHANGE THE STATIC USERID
   const res = await fetch(
     "https://eventmakers-api.vercel.app/api/events?userid=bb521684-5f99-4817-b0d0-afc84d56178f",
     {
