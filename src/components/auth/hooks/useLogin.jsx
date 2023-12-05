@@ -32,6 +32,7 @@ export const useLogin = () => {
   const data = await res.json();
   // console.log(data); //cek data user
   Cookies.set("token", data.token); //store value token di cookies browser
+  Cookies.set("id", data.data.id); //store value id user di cookies browser, untuk kebutuhan GET My Events by user id (user events)
   localStorage.setItem("userData", JSON.stringify(data.data)) //ambil semua value data-nya payload, lalu store ke localStorage dengan key userData
    
   if(!data){
