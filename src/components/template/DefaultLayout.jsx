@@ -4,11 +4,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { usePathname } from "next/navigation";
 
-
 export const DefaultLayout = ({ children }) => {
   const currentPath = usePathname();
 
-  if(currentPath === "/login" || currentPath === "/register") {
+  if(currentPath === "/login" || currentPath === "/register" || currentPath.startsWith("/dashboard")) {
     return (
       <>{children}</>
     )
