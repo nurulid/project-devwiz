@@ -12,10 +12,6 @@
     body > div[data-overlay-container="true"] {
         @apply h-full; 
     }
-
-    body > div[data-overlay-container="true"] > div {
-        @apply h-full; 
-    }
 }
 
 @layer components {
