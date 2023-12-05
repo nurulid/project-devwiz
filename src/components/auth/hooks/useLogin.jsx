@@ -30,7 +30,9 @@ export const useLogin = () => {
     }, body: JSON.stringify({email, password}), 
   }); 
   const data = await res.json();
-  Cookies.set("token", data.token);
+  // console.log(data); //cek data user
+  Cookies.set("token", data.token); //store value token di cookies browser
+  localStorage.setItem("userData", JSON.stringify(data.data)) //ambil semua value data-nya payload, lalu store ke localStorage dengan key userData
    
   if(!data){
     setLoading(false);
