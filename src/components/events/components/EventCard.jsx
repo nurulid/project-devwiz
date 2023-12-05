@@ -3,8 +3,16 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export const EventCard = ({ id, image, name, location, date, participants }) => {
+export const EventCard = ({
+  id,
+  image,
+  name,
+  location,
+  date,
+  participants,
+}) => {
   const isParticipants = participants.length > 0;
+  const limitParticipants = participants.slice(0, 8);
 
   return (
     <Link href={`/events/${id}`}>
@@ -30,7 +38,7 @@ export const EventCard = ({ id, image, name, location, date, participants }) => 
             </div>
             {isParticipants ? (
               <div className="flex mt-2 gap-1 items-center">
-                {participants.map(({ id, name }) => {
+                {limitParticipants.map(({ id, name }) => {
                   const participantsName = name;
                   const nameShort = participantsName.slice(0, 3);
                   return (
@@ -39,6 +47,9 @@ export const EventCard = ({ id, image, name, location, date, participants }) => 
                     </div>
                   );
                 })}
+                {participants.length > 8 ? (
+                  <span className="text-xs text-gray-400">+ more</span>
+                ) : null}
               </div>
             ) : (
               <div className="text-gray-300 text-sm py-3">No participant</div>
