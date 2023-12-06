@@ -1,4 +1,6 @@
 import ListEvents from "@/components/events/components/ListEvents";
+import { Suspense } from 'react'
+import Loading from './loading'
 
 export default function Page() {
   return (
@@ -17,7 +19,9 @@ export default function Page() {
         <span className="arrow down" />
       </div>
       </div>
-      <ListEvents />
+      <Suspense fallback={<Loading/>}>
+        <ListEvents />
+      </Suspense>
     </>
   );
 }
