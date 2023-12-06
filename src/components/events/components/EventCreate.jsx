@@ -19,15 +19,16 @@ export const EventCreate = () => {
   });
 
   const handleEventChange = (e) => {
-    const { name, value } = e.target; // shorthand
+    const { name, value } = e.target; // shorthand / destructur
     setEvent({
       ...event,
-      // [e.target.name]: e.target.value,
+      // [e.target.name]: e.target.value, // belum di destructur
       [name]: value,
     });
   };
 
   async function createEvent() {
+    setLoading(false);
     const { name, description, location, date } = event;
     const res = await fetch("https://eventmakers-api.vercel.app/api/events", {
       method: "POST",
@@ -50,7 +51,7 @@ export const EventCreate = () => {
       return;
     }
 
-    setLoading(true);
+    setLoading(false);
     toast.success("Event created successfully!");
     setEvent("");
     router.refresh();
