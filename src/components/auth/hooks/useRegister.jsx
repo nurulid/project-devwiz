@@ -36,6 +36,7 @@ export const useRegister = () => {
   }
   setLoading(false);
   toast.success("Succesfully Register, Please login 👍")
+  setTimeout(() => router.push("/login"), 1000); //direct to login page after register
  }
  return {loading, handleChange, handleSubmitRegister};
 };
